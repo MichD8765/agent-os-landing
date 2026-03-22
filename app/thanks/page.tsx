@@ -1,31 +1,110 @@
 export default function ThanksPage() {
   return (
-    <main style={{ padding: 44, maxWidth: 760, margin: "0 auto", fontFamily: "system-ui" }}>
-      <h1 style={{ fontSize: 34, marginBottom: 10 }}>You’re in.</h1>
-      <p style={{ fontSize: 16, lineHeight: 1.6 }}>
-        Your download should have started automatically.
-        <br />
-        If it didn’t, retry here:
-      </p>
+    <main style={styles.page}>
+      <div style={styles.container}>
+        
+        <h1 style={styles.h1}>Your Starter Pack is ready</h1>
 
-      <a
-        href="/api/download?file=Agent-OS-Starter-Pack.pdf"
-        style={{
-          display: "inline-block",
-          marginTop: 10,
-          padding: "12px 16px",
-          borderRadius: 12,
-          background: "#111827",
-          color: "white",
-          textDecoration: "none",
-        }}
-      >
-        Download the PDF
-      </a>
+        <p style={styles.sub}>
+          Your download should have started automatically.
+        </p>
 
-      <p style={{ marginTop: 20, color: "#6B7280" }}>
-        Next: The 60-Day AI Agent Quest begins March 1.
-      </p>
+        <p style={styles.body}>
+          If it didn’t, you can refresh the page or try again.
+        </p>
+
+        <div style={styles.divider} />
+
+        <h2 style={styles.h2}>If you want to go deeper</h2>
+
+        <p style={styles.body}>
+          The Starter Pack gives you the mental model.
+        </p>
+
+        <p style={styles.body}>
+          If you want to actually <strong>build your system</strong>, I created the next step:
+        </p>
+
+        <ul style={styles.bullets}>
+          <li>turn ideas into structured agents</li>
+          <li>build your memory + thinking system</li>
+          <li>use AI without feeling scattered</li>
+        </ul>
+
+        <a
+          href="https://melody8784.gumroad.com/l/hsvwc"
+          target="_blank"
+          style={styles.button}
+        >
+          Explore the Builder Pack →
+        </a>
+
+        <p style={styles.small}>
+          No pressure. You can also just start with the Starter Pack and come back later.
+        </p>
+
+      </div>
     </main>
   );
 }
+
+const styles = {
+  page: {
+    minHeight: "100vh",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    background: "#ffffff",
+    padding: "40px 20px",
+    fontFamily:
+      'ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto',
+  },
+  container: {
+    maxWidth: "600px",
+    width: "100%",
+    textAlign: "left",
+  },
+  h1: {
+    fontSize: "34px",
+    marginBottom: "10px",
+  },
+  h2: {
+    fontSize: "22px",
+    marginTop: "30px",
+    marginBottom: "10px",
+  },
+  sub: {
+    fontSize: "18px",
+    color: "#374151",
+    marginBottom: "10px",
+  },
+  body: {
+    fontSize: "16px",
+    marginBottom: "10px",
+    lineHeight: "1.6",
+  },
+  bullets: {
+    marginTop: "10px",
+    marginBottom: "20px",
+    paddingLeft: "20px",
+    lineHeight: "1.7",
+  },
+  button: {
+    display: "inline-block",
+    background: "#111827",
+    color: "#fff",
+    padding: "12px 16px",
+    borderRadius: "10px",
+    textDecoration: "none",
+    marginBottom: "10px",
+  },
+  small: {
+    fontSize: "13px",
+    color: "#6B7280",
+  },
+  divider: {
+    height: "1px",
+    background: "#E5E7EB",
+    margin: "20px 0",
+  },
+};
